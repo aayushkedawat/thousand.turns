@@ -16,15 +16,16 @@ The plugin's source repository is **private**. Do not publish it. Deploy only th
 
 ## Recommended: a separate public repo + GitHub Pages (free)
 
-This keeps the source private and costs nothing.
+This keeps the source private and costs nothing. **Live since 15 November 2026:**
+<https://aayushkedawat.github.io/thousand.turns/>.
 
-1. Create an empty **public** repo named `thousand.turns` under your account (do not initialise it).
-2. Copy the contents of `site/` to the root of that repo and push:
+1. The public repo exists: <https://github.com/aayushkedawat/thousand.turns>.
+2. Redeploy after a change:
 
    ```sh
    cd /tmp && rm -rf thousand.turns && git clone https://github.com/aayushkedawat/thousand.turns.git
    cp -R /Users/aayushkedawat/Downloads/Projects/video_maker_plugin/site/. thousand.turns/
-   cd thousand.turns && git add -A && git commit -m "site: home, privacy and terms" && git push
+   cd thousand.turns && git add -A && git commit -m "site: update" && git push
    ```
 
 3. Repo → **Settings → Pages** → Source: *Deploy from a branch* → branch `main`, folder `/ (root)` → Save.
