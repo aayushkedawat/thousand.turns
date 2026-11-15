@@ -44,6 +44,7 @@ URLs:
 |---|---|
 | Home page | `https://aayushkedawat.github.io/thousand.turns/` |
 | Privacy policy | `https://aayushkedawat.github.io/thousand.turns/privacy.html` |
+| Terms of Service | `https://aayushkedawat.github.io/thousand.turns/terms.html` |
 
 ## Alternative: Cloudflare Pages from the private repo (also free)
 
@@ -69,7 +70,7 @@ OAuth consent screen → **Branding**:
 
 Then **Audience → Publish app**, and on the next sign-in choose *Advanced → Go to Thousand Turns* once.
 
-`privacy.html` is the **Privacy policy URL**; `index.html` (the folder URL) is the **Home page URL**.
+`privacy.html` is the **Privacy policy URL**; `index.html` (the folder URL) is the **Home page URL**; `terms.html` is the **Terms of service URL** where Google's form asks for one.
 
 ## Before you click Publish
 
