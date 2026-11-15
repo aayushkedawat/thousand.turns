@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Privacy — Thousand Turns</title>
+<meta name="description" content="How Thousand Turns handles data: local-only storage, official YouTube and Instagram APIs, no tracking, no sharing.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="top">
+    <div class="wordmark"><a href="./">Thousand Turns</a></div>
+    <nav class="top" aria-label="Site">
+      <a href="./">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://github.com/aayushkedawat/thousand.turns/issues" rel="noopener">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <span class="badge">Privacy policy</span>
+    <h1>Privacy</h1>
+    <p class="lede">Thousand Turns is personal, local software. It does not run a server, collect analytics, set
+      cookies or share your data with anyone. This page explains exactly what it reads, where it is kept and how to
+      delete it.</p>
+    <p class="updated">Effective 15 November 2026</p>
+
+    <h2>1. Who this applies to</h2>
+    <p>This policy covers the <strong>Thousand Turns</strong> application — the locally installed video studio and
+      its command-line tools — and this website. The application is operated by its owner on their own computer for
+      their own YouTube channel. It is not a public service and has no user accounts.</p>
+
+    <h2>2. What the application accesses</h2>
+    <p>Only after you sign in or provide a token, and only through the platforms' official APIs:</p>
+    <ul>
+      <li><strong>YouTube Data API</strong> — your channel's public uploads, titles, descriptions, durations and
+        public statistics; public comments and replies on those videos; public search results used for topic
+        research.</li>
+      <li><strong>YouTube Analytics API</strong> — your channel's own analytics: views, watch time, retention,
+        impressions where available, traffic sources, audience geography and demographics, subscriber changes,
+        search terms.</li>
+      <li><strong>YouTube upload</strong> — only when you run the publish command. The application sends the video
+        file and the title, description, tags, thumbnail and privacy setting you approved.</li>
+      <li><strong>Instagram API (Instagram Login)</strong> — your own media list and insights, account-level
+        audience insights, and publishing a Reel when you explicitly run the publish command with a public video
+        URL.</li>
+    </ul>
+    <p>The application does not read other people's private data, direct messages, passwords or payment details.</p>
+
+    <h2>3. Where the data is stored</h2>
+    <ul>
+      <li><strong>Credentials</strong> (OAuth tokens and API keys) are stored only on your computer, in
+        <code>~/.video-maker/secrets/</code>, with file permissions restricted to your user account.</li>
+      <li><strong>Analytics snapshots, reports and render files</strong> are stored in your own project and channel
+        folders on the same computer.</li>
+      <li><strong>Nothing is uploaded to the application's author.</strong> There is no backend, database or
+        telemetry endpoint.</li>
+    </ul>
+
+    <h2>4. Sharing</h2>
+    <p>No data is sold, rented or shared with third parties. The only network requests are the ones you trigger,
+      made directly from your computer to Google/YouTube or Meta/Instagram. Those companies handle the data under
+      their own privacy policies. This website uses no analytics, advertising, cookies or third-party scripts.</p>
+
+    <h2>5. Retention and deletion</h2>
+    <ul>
+      <li>Delete a token: remove the corresponding file in <code>~/.video-maker/secrets/</code>.</li>
+      <li>Delete analytics: remove the <code>analytics/</code> folder in the channel folder.</li>
+      <li>Delete everything: remove the project and channel folders, then
+        <code>~/.video-maker/</code>.</li>
+      <li>Revoke the platform's access without deleting files:
+        <a href="https://myaccount.google.com/permissions" rel="noopener">Google account permissions</a> or the
+        Instagram app settings.</li>
+    </ul>
+    <p>Because the application stores data only on your machine, deleting those files is complete deletion.</p>
+
+    <h2>6. Children</h2>
+    <p>The application is not directed to children and is not used to collect data from them. It is a production
+      tool for its owner's channel.</p>
+
+    <h2>7. Security</h2>
+    <p>Credentials are kept in a user-only directory and are never printed in logs or committed to version control.
+      Network requests use HTTPS. No system is perfectly secure; if you believe a credential has leaked, revoke it
+      at the platform and create a new one.</p>
+
+    <h2>8. Changes</h2>
+    <p>If this policy changes, the effective date above changes with it. The current version is always at this
+      address.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions or a deletion request:
+      <a href="https://github.com/aayushkedawat/thousand.turns/issues" rel="noopener">open an issue</a>.</p>
+  </main>
+
+  <footer>
+    <p>© 2026 Thousand Turns · <a href="./">Home</a> · <a href="terms.html">Terms</a> ·
+      <a href="https://github.com/aayushkedawat/thousand.turns/issues" rel="noopener">Contact</a></p>
+    <p class="updated">Last updated 15 November 2026</p>
+  </footer>
+</div>
+</body>
+</html>
